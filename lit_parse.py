@@ -20,6 +20,8 @@ lit_list = [i.strip() for i in lit_list]
 for i in lit_list:
     lit_split.append(i.split(";"))
 
+
+
 #sort the literature list alphabetically.
 
 lit_split.sort()
