@@ -1,4 +1,5 @@
 import sys
+import csv
 
 #grab command line arg
 filename = sys.argv[1]
@@ -23,5 +24,13 @@ for i in lit_list:
 
 lit_split.sort()
 
+#Write the list to a CSV.i
 
+with open('articles.csv', 'w') as f:
+    writer = csv.writer(f, delimiter='\t')
+    headerrow = "Articles\t".split('\t')
+    writer.writerow(headerrow)
+    for i in range(0, len(lit_split)):
+        writestring = (str(lit_split[i]) + "\t").split("\t")
+        writer.writerow(writestring)
 
